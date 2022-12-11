@@ -13,6 +13,10 @@ header {
     background-color: var(--header-color);
 }
 
+.portfolio {
+	width: 100%;
+}
+
 .portfolio h1 {
     background-color: white;
     border: 2px solid black;
@@ -26,15 +30,23 @@ header {
     color: var(--font-color);
 }
 
+.navigation {
+	width: 100%;
+}
+
+.navigation nav {
+}
+
 nav ul {
     display: block;
-    margin: 0;
+	margin: 0;
 }
 
 nav li {
-    float: left;
+    float: right;
     display: grid;
     padding: 10px;
+	margin: 1%;
 }
 
 nav li.contact-me {
