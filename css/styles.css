@@ -1,5 +1,6 @@
 body {
-    font-family: SansSerif, "Roboto Light", "DejaVu Sans";
+    background-color: var(--background-color);
+	font-family: SansSerif, "Roboto Light", "DejaVu Sans";
     font-size: 1em;
     font-weight: normal;
 }
