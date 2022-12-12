@@ -37,39 +37,29 @@
 <main>
     <form action="http://localhost/send-data.php" method="post" class="container-fluid">
         <div class="row">
-            <div class="col-3">
+            <div class="form-group text-center">
                 <label for="email-address" class="form-label">Elektroninio pašto adresas</label>
-            </div>
-            <div class="col">
-                <input type="text" id="email-address" name="email-address" placeholder="El. pašto adresas"
-                       class="form-control"><br>
+                <input type="text" id="email-address" name="email-address" placeholder="El. pašto adresas" class="form-control"><br>
             </div>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div class="form-group text-center">
                 <label for="subject" class="form-label">Užklausos tema</label>
-            </div>
-            <div class="col">
                 <select name="subject-type" id="subject" class="form-control">
                     <option value="ans1">Dėl Archrice projekto</option>
                     <option value="ans2">Dėl stebėjimo kameros kibernetinio saugumo tyrimo</option>
                     <option value="ans3">Dėl Tryhackme užduočių sprendimų</option>
-                </select>
+                </select><br>
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col text-center">
                 <label for="body" class="form-label">Užklausos turinys</label>
                 <br>
-                <textarea name="turinys" id="body" cols="30" rows="10" placeholder="Rašykite užklausą"
-                          class="form-control"></textarea>
+                <textarea name="turinys" id="body" cols="30" rows="10" placeholder="Rašykite užklausą" class="form-control"></textarea><br>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <input value="Siųsti" type="submit" class="form-control btn btn-primary">
-            </div>
-        </div>
+        <button type="submit" class="col-12 btn btn-primary">Siųsti</button>
     </form>
 </main>
 <footer class="text-center text-lg-start bg-light text-muted">
