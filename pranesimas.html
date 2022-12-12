@@ -7,36 +7,30 @@
     <link rel="stylesheet" href="css/contact.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <title>Pranešimas</title>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">PORTFOLIO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 position-absolute">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="apie.html">APIE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projektai.html">PROJEKTAI</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="kontaktai.html">KONTAKTAI</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">BLOG</a>
-                    </li>
-                    <li class="nav-item text-nowrap">
-                        <a class="nav-link" href="pranesimas.html">PARAŠYK MAN!</a>
-                    </li>
-                </ul>
-            </div>
+            <a class="navbar-brand nav-link active" href="index.html">PORTFOLIO</a>
+            <ul class="navbar-nav mb-2">
+                <li class="nav-item">
+                    <a class="nav-link active" href="apie.html">APIE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="projektai.html">PROJEKTAI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="kontaktai.html">KONTAKTAI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="blog.html">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="pranesimas.html">PARAŠYK MAN!</a>
+                </li>
+            </ul>
         </div>
     </nav>
 </header>
@@ -47,7 +41,8 @@
                 <label for="email-address" class="form-label">Elektroninio pašto adresas</label>
             </div>
             <div class="col">
-                <input type="text" id="email-address" name="email-address" placeholder="El. pašto adresas" class="form-control"><br>
+                <input type="text" id="email-address" name="email-address" placeholder="El. pašto adresas"
+                       class="form-control"><br>
             </div>
         </div>
         <div class="row">
@@ -66,14 +61,15 @@
             <div class="col">
                 <label for="body" class="form-label">Užklausos turinys</label>
                 <br>
-                <textarea name="turinys" id="body" cols="30" rows="10" placeholder="Rašykite užklausą" class="form-control"></textarea>
+                <textarea name="turinys" id="body" cols="30" rows="10" placeholder="Rašykite užklausą"
+                          class="form-control"></textarea>
             </div>
         </div>
-		<div class="row">
-			<div class="col">
-				<input value="Siųsti" type="submit" class="form-control btn btn-primary">
-			</div>
-		</div>
+        <div class="row">
+            <div class="col">
+                <input value="Siųsti" type="submit" class="form-control btn btn-primary">
+            </div>
+        </div>
     </form>
 </main>
 <footer class="text-center text-lg-start bg-light text-muted">
