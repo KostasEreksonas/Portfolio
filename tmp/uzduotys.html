@@ -29,7 +29,7 @@
     let d = 4;
     let x,y;
     const intersection = [Math.min(c, d), Math.max(a, b)];
-    document.write('Intervalų [' + a + ',' + b + ' ir ' + c + ',' + d + '] sankirtos rėžiai yra [' + intersection + ']<br>')
+    document.write('Intervalų [' + a + ',' + b + '] ir [' + c + ',' + d + '] sankirtos rėžiai yra [' + intersection + ']<br>')
 
 
     // Sprendimas naudojant if sąlygą
@@ -40,7 +40,7 @@
       x = range2[0];
       y = range1[1];
       intersection_if.push(x, y);
-      document.write('Intervalų [' + range1 + ' ir ' + range2 + '] sankirtos rėžiai yra [' + intersection_if + ']')
+      document.write('Intervalų [' + range1 + '] ir [' + range2 + '] sankirtos rėžiai yra [' + intersection_if + ']')
     } else {
           document.write('Sankirta tarp duotų rėžių neegzistuoja.')
     }
