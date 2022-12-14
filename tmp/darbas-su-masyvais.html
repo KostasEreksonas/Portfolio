@@ -59,13 +59,22 @@
 <h2>Penkta užduotis</h2>
 <p id="penkta"></p>
 <script>
+    let ats5 = '';
     let strings = [];
     for (let z = 0; z < a.length; z++) {
         if (typeof a[z] == "string") {
             strings.push(a[z]);
         }
     }
-    document.getElementById('penkta').innerHTML = strings.join('-');
+    for (let s = 0; s < strings.length; s++) {
+        if (s === strings.length-1) {   // Po paskutinio elemento nedėti brūkšnio
+            ats5 += strings[s];
+        } else {
+            ats5 += strings[s] + '-';
+        }
+    }
+    document.getElementById('penkta').innerHTML = ats5;
+    //document.getElementById('penkta').innerHTML = strings.join('-');
 </script>
 </body>
 </html>
