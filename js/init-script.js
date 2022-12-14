@@ -15,3 +15,7 @@ let diena = 22;
 let gimimoData = 'Gimimo data: ' + diena + '.' + menuo + '.' + metai;
 let sum = metai % 10 + menuo % 10 + diena % 10;
 console.log('Gimimo data: ' + gimimoData + ' Paskutinių skaitmenų suma: ' + sum)
+
+images = document.getElementsByClassName('project-img')
+
+console.log(images)
