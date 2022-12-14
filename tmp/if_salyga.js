@@ -1,6 +1,6 @@
 let a=-5, b=0, c=-4, d=4, x, y;
 
-if (a < b && c < d) {
+if (a < b || c < d) {
     // Sankirta tarp elementų c ir b
     if (c >= a && c <= b && d > b) {
         x = c;
