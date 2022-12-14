@@ -1,9 +1,4 @@
-let a, b, c, d, x, y;
-
-a = -5;
-b = 0;
-c = -4;
-d = 4;
+let a=-5, b=0, c=-4, d=4, x, y;
 
 if (a < b && c < d) {
     // Sankirta tarp elementų c ir b
