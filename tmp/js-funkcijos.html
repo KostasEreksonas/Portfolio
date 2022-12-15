@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Funkcijos</title>
+</head>
+<body>
+    <h1>JS Funkcijos</h1>
+    <h2>Pirma užduotis</h2>
+    <p id="pirma"></p>
+    <script>
+        let studentas_arr = ["Kostas", "Ereksonas", 1, "CodeAcademy", [6, 7, 8]];
+    </script>
+    <script>
+        function isvedimas(arr) {
+            return arr[0] + ' ' + arr[1] + ', mokosi ' + arr[3] + ', ' + arr[2] + ' kurse, jo pažymiai: ' + arr[4];
+        }
+        document.getElementById("pirma").innerHTML = isvedimas(studentas_arr);
+    </script>
+    <h2>Antra užduotis</h2>
+    <p id="antra"></p>
+    <script>
+        function tipai(arr) {
+            let ats = '';
+            for (let i = 0; i < arr.length; i++) {
+                ats += 'Parametro \'' + arr[i] + '\' tipas yra \'' + typeof arr[i] + '\'<br>\n';
+            }
+            return ats;
+        }
+        document.getElementById("antra").innerHTML = tipai(studentas_arr);
+    </script>
+    <h2>Trečia - penkta užduotys</h2>
+    <p id="trecia"></p>
+    <script>
+        let studentas_obj = {
+            vardas: "Kostas",
+            pavarde: "Ereksonas",
+            kursas: 1,
+            istaiga: "CodeAcademy",
+            pazymiai: [6,7,8]
+        }
+        console.log(studentas_obj);
+        document.getElementById("trecia").innerHTML = "Studento duomenys gali būti pamatyti konsolėje";
+    </script>
+    <h2>Septinta užduotis</h2>
+    <p id="septinta_dot"></p>
+    <p id="septinta_bracket"></p>
+    <script>
+        function isvedimas_dot(obj) {
+            return obj.vardas + ' ' + obj.pavarde + ', mokosi ' + obj.istaiga + ', ' + obj.kursas + ' kurse, jo pažymiai: ' + obj.pazymiai;
+        }
+        function isvedimas_bracket(obj) {
+            return obj["vardas"] + ' ' + obj["pavarde"] + ', mokosi ' + obj["istaiga"] + ', ' + obj["kursas"] +
+                ' kurse, jo pažymiai: ' + obj["pazymiai"];
+        }
+        document.getElementById("septinta_dot").innerHTML = isvedimas_dot(studentas_obj);
+        document.getElementById("septinta_bracket").innerHTML = isvedimas_bracket(studentas_obj);
+    </script>
+    <h2>Aštunta užduotis</h2>
+    <p id="astunta"></p>
+    <script>
+        function pazymiai(obj) {
+            let ats = 'Studento pažymiai yra: ';
+            for (let i = 0; i < obj["pazymiai"].length; i++) {
+                if (i === obj["pazymiai"].length - 1) {
+                    ats += obj.pazymiai[i] + '.';
+                } else {
+                    ats += obj.pazymiai[i] + ', ';
+                }
+            }
+            return ats;
+        }
+        document.getElementById("astunta").innerHTML = pazymiai(studentas_obj);
+    </script>
+    <h2>Devinta užduotis</h2>
+    <p id="devinta"></p>
+    <script>
+        function kelimas(obj) {
+            let ats = 'Pakelti studento pažymiai yra: ';
+            for (let i = 0; i < obj["pazymiai"].length; i++) {
+                if (obj.pazymiai[i] < 10 && i !== obj["pazymiai"].length - 1) {
+                    ats += obj.pazymiai[i] + 1 + ', ';
+                } else if (obj.pazymiai[i] < 10 && i === obj["pazymiai"].length - 1) {
+                    ats += obj.pazymiai[i] + 1 + '.';
+                } else if (obj.pazymiai[i] === 10 && i !== obj["pazymiai"].length - 1) {
+                    ats += obj.pazymiai[i] + ', ';
+                } else if (obj.pazymiai[i] === 10 && i === obj["pazymiai"].length - 1) {
+                    ats += obj.pazymiai[i]  + '.';
+                }
+            }
+            return ats;
+        }
+        document.getElementById("devinta").innerHTML = kelimas(studentas_obj);
+    </script>
+    <h2>Dešimta užduotis</h2>
+    <p id="desimta"></p>
+    <script>
+        function pazymiuSuma(obj) {
+            let sum = 0;
+            for (let i = 0; i < obj["pazymiai"].length; i++) {
+                sum += obj.pazymiai[i];
+            }
+            let ats = 'Studento pažymių suma yra: ' + sum + '.';
+            return ats;
+        }
+        document.getElementById("desimta").innerHTML = pazymiuSuma(studentas_obj);
+    </script>
+    <h2>Vienuolikta užduotis</h2>
+    <p id="vienuolikta"></p>
+    <script>
+        function sandauga(obj) {
+            let mult = 1;
+            for (let i = 0; i < obj["pazymiai"].length; i++) {
+                mult *= obj.pazymiai[i];
+            }
+            let ats = 'Studento pažymių sandauga yra: ' + mult + '.';
+            return ats;
+        }
+        document.getElementById('vienuolikta').innerHTML = sandauga(studentas_obj);
+    </script>
+    <h2>Dvylikta užduotis</h2>
+    <p id="dvylikta"></p>
+    <script>
+        function typeCheck(obj) {
+            let ats = '';
+            if (typeof obj.kursas === "number") {
+                ats = 'Kursas ' + obj["kursas"] + ' yra numeral tipo.';
+            } else {
+                ats = 'Kursas ' + obj["kursas"] + ' nėra numeral tipo.';
+            }
+            return ats;
+        }
+        document.getElementById("dvylikta").innerHTML = typeCheck(studentas_obj);
+    </script>
+    <h2>Trylikta užduotis</h2>
+    <p id="trylikta"></p>
+    <script>
+        function check(obj) {
+            let ats = '';
+            if (obj.kursas === 4 && typeof obj.kursas === "number") {
+                ats = 'Studentas mokosi 4 kurse, o kurso reikšmė yra numeral tipo.';
+            } else if (obj.kursas !== 4 && typeof obj.kursas === "number") {
+                ats = 'Studentas mokosi ne 4, o ' + obj["kursas"] + ' kurse, o kurso reikšmė yra numeral tipo.';
+            } else if (obj.kursas === 4 && typeof obj.kursas !== "number") {
+                ats = 'Studentas mokosi 4 kurse, o kurso reikšmė yra ne numeral, o ' + typeof obj["kursas"] + ' tipo.';
+            } else if (obj.kursas === 4 && typeof obj.kursas !== "number") {
+                ats = 'Studentas mokosi ne 4, o ' + obj["kursas"] + ' kurse, o kurso reikšmė yra ne numeral, o ' + typeof obj["kursas"] + ' tipo.';
+            }
+            return ats;
+        }
+        document.getElementById("trylikta").innerHTML = check(studentas_obj);
+    </script>
+    <h2>Keturiolikta užduotis</h2>
+    <p id="keturiolikta"></p>
+    <script>
+        function paskutinis(obj) {
+            if (obj.kursas === 4) {
+                ats = 'Studentas ' + obj["vardas"] + ' ' + obj["pavarde"] + ' yra abiturientas.';
+            } else {
+                ats = 'Studentui ' + obj["vardas"] + ' ' + obj["pavarde"] + ' dar toli iki mokslų baigimo.';
+            }
+            return ats;
+        }
+        document.getElementById("keturiolikta").innerHTML = paskutinis(studentas_obj);
+    </script>
+    <h2>Penkiolikta užduotis</h2>
+    <p id="penkiolikta"></p>
+    <script>
+        function suma(a,b) {
+            return a + b;
+        }
+        document.getElementById("penkiolikta").innerHTML = 'Skaičių 1 ir 2 suma yra: ' + suma(1,2);
+    </script>
+    <h2>Šešiolikta užduotis</h2>
+    <p id="sesiolikta"></p>
+    <script>
+        function suma100(){
+            let ats = 0;
+            for (let i = 1; i <= 100; i+=2) {
+                ats += suma(i,i+1);
+            }
+            return ats;
+        }
+        document.getElementById("sesiolikta").innerHTML = 'Skaičių nuo 1 iki 100 suma yra: ' + suma100() + '.';
+    </script>
+    <h2>Septyniolikta užduotis</h2>
+    <p id="septyniolikta_even"></p>
+    <p id="septyniolikta_odd"></p>
+    <script>
+        function elementuSuma(arr, numType) { //even || odd
+            let sum = 0;
+            if (numType === "even") {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] % 2 === 0) {
+                        sum += arr[i];
+                    }
+                }
+            } else if (numType === "odd") {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] % 2 !== 0) {
+                        sum += arr[i];
+                    }
+                }
+            }
+            return sum;
+        }
+        let A = [1,3,6,5,7,2,2,4,4,8];
+        document.getElementById("septyniolikta_even").innerHTML = 'Lyginių skaičių suma yra: ' + elementuSuma(A, "even") + '.';
+        document.getElementById("septyniolikta_odd").innerHTML = 'Nelyginių skaičių suma yra: ' + elementuSuma(A, "odd") + '.';
+    </script>
+</body>
+</html>
