@@ -268,7 +268,7 @@ function randomNumGen(num) {
     let x = 0;
     let numbers = [];
     for (let i = 0; i < num; i++) {
-        x = Math.floor((Math.random() * 10) + 1);
+        x = Math.floor((Math.random() * 100) + 1);
         numbers.push(x);
     }
     return numbers;
