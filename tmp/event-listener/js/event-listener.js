@@ -20,11 +20,32 @@ function addRow() {
     let modelis = document.getElementById("modelis").value;
     let metai = document.getElementById("metai").value;
     let salis = document.getElementById("salis").value;
+
+    let table = document.getElementById('lentele');
+    let row = document.createElement('tr');
+
+    let data = [gamintojas, modelis, metai, salis];
+    for (let i = 0; i < data.length; i++) {
+        let cell = document.createElement('td');
+        cell.innerHTML = data[i];
+        row.appendChild(cell);
+    }
+    table.appendChild(row);
+}
+
+let button3 = document.getElementById('button3');
+button3.addEventListener('click', addRow);
+
+/*function addRow() {
+    let gamintojas = document.getElementById("gamintojas").value;
+    let modelis = document.getElementById("modelis").value;
+    let metai = document.getElementById("metai").value;
+    let salis = document.getElementById("salis").value;
     document.getElementById('lentele').innerHTML += '<tr><td>' + gamintojas + '</td><td>' + modelis +
         '</td><td>' + metai + '</td><td>' + salis + '</td></tr>';
 }
 let button3 = document.getElementById('button3');
-button3.addEventListener('click', addRow);
+button3.addEventListener('click', addRow);*/
 
 // Ketvirta užduotis
 function realTime() {
